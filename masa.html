@@ -2,25 +2,24 @@
 <html>
     <head>
         <title>MASA CORPORAL</title>
-       
     </head>
     <body>
-        
-        <h1>Calcular la masa muscular de una persona</h1>
-    <div class="MASA CORPORAL">
-        <p id= "Input para peso"> </p>   
-        <p id="Input para altura"> </p>
-
-
-        <form id="text">
+        <h1>MASA CORPORAL</h1>
+        <!--BOTONES-->
             <p id="Ingreso de datos">INGRESO DE DATOS</p>
-            <input type="text" id="nombre" /><button>PESO</button><br>
-            <input type="text" id="email"><button>ALTURA</button>
-       
-        </form>
-    </div>
-        <script src="./masa.js"></script>
+            <input type="text" id="peso"/><button>PESO</button><br>
+            <input type="text" id="altura"/><button>ALTURA</button><br>
+            <input type="text" id="resultado" disabled/>
+            <input type="button" value="Calcular" id="imc" onclick="Calcular()"/>
+           
     </body>
-
+    <script>
+    function Calcular(){
+            let peso = parseFloat(document.getElementById("peso").value);
+            let altura = parseFloat(document.getElementById("altura").value);
+            let resultado = peso/(altura*altura);
+            document.getElementById("resultado").value=resultado;
+            let boton = document.getElementById("imc");}
+    </script>
 
 </html>
